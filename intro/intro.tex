@@ -27,7 +27,7 @@
 \frametitle{What is Soldering?}
 \begin{itemize}
 \item Joining parts with a \emph{low melting point} filler metal
-\item Reversible - filler can be removed to separate the parts
+\item Reversible (mostly) - filler can be removed to separate the parts
 \item Provides both \emph{electrical} and \emph{mechanical} connection
 \end{itemize}
 \end{frame}
@@ -38,6 +38,7 @@
 \item Toxic heavy metals (Pb, Cd, Sb)
 \item High temperatures
 \item Flux smoke
+\item We'll discuss each in more detail
 \end{itemize}
 \end{frame}
 
@@ -48,7 +49,7 @@ We can classify soldering processes by the heat source used.
 \item \textbf{Iron soldering} \\
 A heated metal tip provides heat to the joint by \emph{conduction}
 \item \textbf{Reflow soldering} \\
-Non-contact heating using \emph{convection} (oven / heat gun) or \emph{radiation} (heat lamp)
+Non-contact heating using \emph{convection} or \emph{radiation} in an oven or with a hand-held tool
 \end{itemize}
 \end{frame}
 
@@ -75,7 +76,7 @@ Universally used for precision electronics work.
 \frametitle{Soldering Iron Temperature Control}
 \begin{itemize}
 \item \textbf{None} \\
-Lowest cost. No temperature control whatsoever.
+Lowest cost. Useless for precision work.
 \item \textbf{Resistive element + sensor} \\
 Most commonly used. Easily adjustable as needed.
 \item \textbf{Curie point} \\
@@ -96,11 +97,53 @@ Various alloys with low melting point. Brittle.
 \end{frame}
 
 \begin{frame}
-\frametitle{Soldering Fluxes}
-Fluxes
+\frametitle{PCB Surface Finishes}
 \begin{itemize}
-\item
+\item \textbf{None}\\
+Bare copper. Corrodes rapidly, rarely used
+\item \textbf{HASL} \\
+Thin plating of solder. Tends to form ``humps" over pads
+\item \textbf{OSP} \\
+Very thin polymer layer. Short shelf life.
+\item \textbf{Immersion tin/silver} \\
+Thin layer of easily solderable material
+\item \textbf{ENIG} \\
+Typ. $5 \mu m$ Ni, $100 nm$ Au. Expensive but long shelf life.
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Intermetallics}
+\end{frame}
+
+\begin{frame}
+\frametitle{Oxidation}
+\begin{itemize}
+\item Metals like to form oxides, esp. when heated
+\item Workpieces and solder wire have ``native oxide" layer
+\item Working under inert gas inhibits additional oxidation, but won't remove native oxide
+\item Oxides prevent IMC formation and free flow of molten solder
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Soldering Fluxes - Function}
+\begin{itemize}
+\item Remove native oxide from surfaces
+\item Prevent oxidation of molten solder
+\item Strong reducing agents - oxidize rapidly when heated in air
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Soldering Fluxes - Types}
+\begin{itemize}
+\item Natural rosin vs synthetic compounds
+\item Cleaning required? Hot water, alcohol, other solvent?
+\end{itemize}
+\begin{alertblock}{Safety note}
+Long-term exposure to flux vapors can trigger allergic reactions or cause asthma. Avoid inhaling flux smoke.
+\end{alertblock}
 \end{frame}
 
 \end{document}
