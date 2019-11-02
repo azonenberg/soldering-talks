@@ -4,7 +4,7 @@
 
 \title{Introduction to Soldering}
 \author{Andrew D. Zonenberg}
-\institute{Antikernel Labs}
+%\institute{Antikernel Labs}
 \date{\today}
 
 \begin{document}
@@ -18,7 +18,7 @@
 \item 2013-2015: Process Engineer, LIB3
 \item 2015: Ph.D Computer Science (RPI)
 \item 2015 - present: Sr. Security Consultant, IOActive
-\item 2016 - present: Research Scientist, Antikernel Labs
+%\item 2016 - present: Research Scientist, Antikernel Labs
 \item Designing and soldering PCBs since 2009
 \end{itemize}
 \end{frame}
@@ -27,9 +27,12 @@
 \frametitle{What is Soldering?}
 \begin{itemize}
 \item Joining parts with a \emph{low melting point} filler metal
-\item Reversible (mostly) - filler can be removed to separate the parts
+\item Reversible - filler can be removed to separate parts
 \item Provides both \emph{electrical} and \emph{mechanical} connection
 \end{itemize}
+\begin{center}
+\includegraphics[height=3cm,keepaspectratio]{intro-shot.jpg}
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -38,8 +41,10 @@
 \item Toxic heavy metals (Pb, Cd, Sb)
 \item High temperatures
 \item Flux smoke
-\item We'll discuss each in more detail
 \end{itemize}
+\begin{center}
+\includegraphics[width=3cm,keepaspectratio]{safety.jpg}
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -60,6 +65,9 @@ Non-contact heating using \emph{convection} or \emph{radiation} in an oven or wi
 \item Heat source
 \item Tip
 \end{itemize}
+\begin{center}
+\includegraphics[width=10cm,keepaspectratio]{anatomy.jpg}
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -91,8 +99,50 @@ More expensive. Very stable but not adjustable.
 Industry standard until early 2000s
 \item \textbf{Sn-Ag-Cu (SAC)} \\
 Lead free, higher melting point. Widely used.
-\item \textbf{Sn-In-Bi} \\
+\item \textbf{In/Bi based} \\
 Various alloys with low melting point. Brittle.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tin Whiskers}
+\begin{itemize}
+\item x
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sn-Pb Solder Alloys}
+\begin{itemize}
+\item Largely immune to tin whiskers
+\item Midrange melting point (183C for 63/37 eutectic)
+\item Banned in Europe since 2003 due to toxicity concerns
+\item Still used in some medical/aerospace applications
+\end{itemize}
+\begin{alertblock}{Safety note}
+Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{SAC Solder Alloys}
+\begin{itemize}
+\item Sn/Ag/Cu. 3\% Ag / 0.5\% Cu is most common
+\item Not eutectic, but close
+\item Higher melting point (SAC305 is 217-220C)
+\item Nontoxic
+\item Tin whisker concerns
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Low melting point alloys}
+\begin{itemize}
+\item Used on heat-sensitive components (LED lighting etc)
+\item 52\% In / 48\% Sn melts at 118C
+\item 57\% Bi / 42\% Sn / 1\% Ag melts at 138C
+\item 100\% In melts at 157C
+\item Generally brittle
 \end{itemize}
 \end{frame}
 
@@ -113,7 +163,14 @@ Typ. $5 \mu m$ Ni, $100 nm$ Au. Expensive but long shelf life.
 \end{frame}
 
 \begin{frame}
-\frametitle{Intermetallics}
+\frametitle{Intermetallic Compounds}
+\begin{itemize}
+\item Cu, Sn, etc are \emph{soluble} in molten solder!
+\item When molten solder is applied to a surface, \emph{diffusion} takes place between the surface and solder
+\item The resulting \emph{intermetallic compound} (IMC) bonds strongly to both the solder and component.
+\item No IMC = no solder joint (e.g. Sn based solder on Al surface)
+\item IMC is, unfortunately, more brittle than bulk solder
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -140,6 +197,7 @@ Typ. $5 \mu m$ Ni, $100 nm$ Au. Expensive but long shelf life.
 \begin{itemize}
 \item Natural rosin vs synthetic compounds
 \item Cleaning required? Hot water, alcohol, other solvent?
+\item Form - Gel, liquid, foam
 \end{itemize}
 \begin{alertblock}{Safety note}
 Long-term exposure to flux vapors can trigger allergic reactions or cause asthma. Avoid inhaling flux smoke.
