@@ -48,6 +48,166 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{Tin Whiskers}
+\begin{itemize}
+\item Metals can form ``whiskers" over time, causing shorts
+\item Exact mechanism of formation not well understood
+\item Addition of lead to tin reduces whisker formation
+\item Mostly a concern in aerospace / life safety systems
+\end{itemize}
+\begin{center}
+\includegraphics[width=4cm,keepaspectratio]{whiskers.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sn-Pb Solder Alloys}
+\begin{itemize}
+\item Largely immune to tin whiskers
+\item Midrange melting point (183C for 63/37 eutectic)
+\item Industry standard until early 2000s
+\item Banned in Europe since 2003 due to toxicity concerns
+\item Still used in some medical/aerospace applications
+\end{itemize}
+\begin{alertblock}{Safety note}
+Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{SAC Solder Alloys (Sn-Ag-Cu)}
+\begin{itemize}
+\item 3\% Ag / 0.5\% Cu is most common
+\item Not eutectic, but close
+\item Higher melting point (SAC305 is 217-220C)
+\item Nontoxic
+\item Tin whisker concerns
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Low melting point alloys}
+\begin{itemize}
+\item Used on heat-sensitive components (LED lighting etc)
+\item 52\% In / 48\% Sn melts at 118C
+\item 57\% Bi / 42\% Sn / 1\% Ag melts at 138C
+\item 100\% In melts at 157C
+\item Brittle, lose strength when heated
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{PCB Surface Finishes}
+\begin{itemize}
+\item Bare copper corrodes rapidly
+\item Protective layer is applied to pads at the factory
+\item SMOBC (Solder Mask Over Bare Copper)
+\end{itemize}
+% TODO: picture of really oxidized pad
+\end{frame}
+
+\begin{frame}
+\frametitle{Unplated Copper}
+\begin{itemize}
+\item Extremely short shelf life
+\item Only used in low cost, quick turn prototypes
+\item Common on home-etched boards
+\item Extremely flat surface
+\end{itemize}
+\begin{center}
+\includegraphics[width=4cm,keepaspectratio]{no-plating.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{HASL - Hot Air Solder Leveling}
+\begin{itemize}
+\item Thick (1800 - 5100 nm) layer of solder
+\item Board finish \emph{is} solder - excellent solderability
+\item Cheap, but poor surface flatness
+\end{itemize}
+% TODO: picture of HASL finish
+\end{frame}
+
+\begin{frame}
+\frametitle{OSP - Organic Solderability Preservative}
+\begin{itemize}
+\item Very thin (200 - 500 nm) organic oxidation barrier
+\item Degrades rapidly if not soldered
+\item Inexpensive and extremely flat
+\end{itemize}
+% TODO: picture of OSP finish
+\end{frame}
+
+\begin{frame}
+\frametitle{Immersion Tin / Silver}
+\begin{itemize}
+\item Thicker than OSP (500 - 1200 nm)
+\item Moderate shelf life
+\item More expensive, but flat
+\end{itemize}
+% TODO: picture of immersion tin/silver finish
+\end{frame}
+
+\begin{frame}
+\frametitle{ENIG}
+\begin{itemize}
+\item 2-layer system: 75-125 nm Au over 3000 - 6000 nm Ni
+\item Ni acts as diffusion barrier
+\item More expensive
+\item Long shelf life
+\end{itemize}
+\begin{center}
+\includegraphics[height=4cm,keepaspectratio]{enig.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Intermetallic Compounds}
+\begin{itemize}
+\item Cu, Sn, etc are \emph{soluble} in molten solder!
+\item When molten solder is applied to a surface, \emph{diffusion} takes place between the surface and solder
+\item The resulting \emph{intermetallic compound} (IMC) bonds strongly to both the solder and component.
+\item No IMC = no solder joint (e.g. Sn based solder on Al surface)
+\item IMC is, unfortunately, more brittle than bulk solder
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Oxidation}
+\begin{itemize}
+\item Metals like to form oxides, esp. when heated
+\item Workpieces and solder wire have ``native oxide" layer
+\item Working under inert gas inhibits additional oxidation, but won't remove native oxide
+\item Oxides prevent IMC formation and free flow of molten solder
+\end{itemize}
+\begin{center}
+\includegraphics[width=4cm,keepaspectratio]{solder-oxidation.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Soldering Fluxes - Function}
+\begin{itemize}
+\item Remove native oxide from surfaces
+\item Prevent oxidation of molten solder
+\item Strong reducing agents - oxidize rapidly when heated in air
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Soldering Fluxes - Types}
+\begin{itemize}
+\item Natural rosin vs synthetic compounds
+\item Cleaning required? Hot water, alcohol, other solvent?
+\item Form - Gel, liquid, foam
+\end{itemize}
+\begin{alertblock}{Safety note}
+Long-term exposure to flux vapors can trigger allergic reactions or cause asthma. Avoid inhaling flux smoke.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
 \frametitle{Soldering Processes}
 We can classify soldering processes by the heat source used.
 \begin{itemize}
@@ -71,137 +231,68 @@ Non-contact heating using \emph{convection} or \emph{radiation} in an oven or wi
 \end{frame}
 
 \begin{frame}
-\frametitle{Soldering Iron Heat Sources}
+\frametitle{Butane Heating}
 \begin{itemize}
-\item \textbf{Combustion} \\
-Portable, but poor temperature control. Rarely used.
-\item \textbf{Electrical} \\
-Universally used for precision electronics work.
+\item Portable, but poor temperature control
+\item Useless for precision work
 \end{itemize}
+\begin{center}
+\includegraphics[width=8cm,keepaspectratio]{butane-1.jpg} \\
+\includegraphics[width=4cm,keepaspectratio]{butane-2.jpg} \\
+\end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Soldering Iron Temperature Control}
+\frametitle{Uncontrolled 120V Iron}
 \begin{itemize}
-\item \textbf{None} \\
-Lowest cost. Useless for precision work.
-\item \textbf{Resistive element + sensor} \\
-Most commonly used. Easily adjustable as needed.
-\item \textbf{Curie point} \\
-More expensive. Very stable but not adjustable.
+\item Heating element is fed directly from mains power
+\item Usually a coil of nichrome wire
+\item No temperature control whatsoever
+\item Not useful for modern PCBs
 \end{itemize}
+\begin{center}
+\includegraphics[width=8cm,keepaspectratio]{uncontrolled-iron.jpg} \\
+\includegraphics[width=8cm,keepaspectratio]{nichrome-heater.jpg}
+\end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Solder Materials}
+\frametitle{Digitally Controlled DC Iron}
 \begin{itemize}
-\item \textbf{Sn-Pb} \\
-Industry standard until early 2000s
-\item \textbf{Sn-Ag-Cu (SAC)} \\
-Lead free, higher melting point. Widely used.
-\item \textbf{In/Bi based} \\
-Various alloys with low melting point. Brittle.
+\item Typically a ceramic heating element
+\item Thermocouple embedded in heater goes to base station
+\item Base varies voltage/current to maintain target temperature
 \end{itemize}
+\begin{center}
+\includegraphics[width=8cm,keepaspectratio]{ceramic-heater.jpg} \\
+\includegraphics[height=3cm,keepaspectratio]{base-station.jpg}
+\end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Tin Whiskers}
+\frametitle{Curie Point Iron}
 \begin{itemize}
+\item Base station supplies RF power to a coil
+\item Tip inductively couples to coil and self-heats
+\item Tip loses magnetism at Curie point and starts cooling
+\item Temperature inherently self-regulates
+\item Extremely stable, but non-adjustable, temperature
+\end{itemize}
+\begin{center}
+\includegraphics[width=8cm,keepaspectratio]{curie-iron.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Iron anatomy photos - @tawrbo and @Claude1079
 \item x
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Sn-Pb Solder Alloys}
-\begin{itemize}
-\item Largely immune to tin whiskers
-\item Midrange melting point (183C for 63/37 eutectic)
-\item Banned in Europe since 2003 due to toxicity concerns
-\item Still used in some medical/aerospace applications
-\end{itemize}
-\begin{alertblock}{Safety note}
-Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
-\end{alertblock}
-\end{frame}
-
-\begin{frame}
-\frametitle{SAC Solder Alloys}
-\begin{itemize}
-\item Sn/Ag/Cu. 3\% Ag / 0.5\% Cu is most common
-\item Not eutectic, but close
-\item Higher melting point (SAC305 is 217-220C)
-\item Nontoxic
-\item Tin whisker concerns
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Low melting point alloys}
-\begin{itemize}
-\item Used on heat-sensitive components (LED lighting etc)
-\item 52\% In / 48\% Sn melts at 118C
-\item 57\% Bi / 42\% Sn / 1\% Ag melts at 138C
-\item 100\% In melts at 157C
-\item Generally brittle
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{PCB Surface Finishes}
-\begin{itemize}
-\item \textbf{None}\\
-Bare copper. Corrodes rapidly, rarely used
-\item \textbf{HASL} \\
-Thin plating of solder. Tends to form ``humps" over pads
-\item \textbf{OSP} \\
-Very thin polymer layer. Short shelf life.
-\item \textbf{Immersion tin/silver} \\
-Thin layer of easily solderable material
-\item \textbf{ENIG} \\
-Typ. $5 \mu m$ Ni, $100 nm$ Au. Expensive but long shelf life.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Intermetallic Compounds}
-\begin{itemize}
-\item Cu, Sn, etc are \emph{soluble} in molten solder!
-\item When molten solder is applied to a surface, \emph{diffusion} takes place between the surface and solder
-\item The resulting \emph{intermetallic compound} (IMC) bonds strongly to both the solder and component.
-\item No IMC = no solder joint (e.g. Sn based solder on Al surface)
-\item IMC is, unfortunately, more brittle than bulk solder
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Oxidation}
-\begin{itemize}
-\item Metals like to form oxides, esp. when heated
-\item Workpieces and solder wire have ``native oxide" layer
-\item Working under inert gas inhibits additional oxidation, but won't remove native oxide
-\item Oxides prevent IMC formation and free flow of molten solder
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Soldering Fluxes - Function}
-\begin{itemize}
-\item Remove native oxide from surfaces
-\item Prevent oxidation of molten solder
-\item Strong reducing agents - oxidize rapidly when heated in air
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Soldering Fluxes - Types}
-\begin{itemize}
-\item Natural rosin vs synthetic compounds
-\item Cleaning required? Hot water, alcohol, other solvent?
-\item Form - Gel, liquid, foam
-\end{itemize}
-\begin{alertblock}{Safety note}
-Long-term exposure to flux vapors can trigger allergic reactions or cause asthma. Avoid inhaling flux smoke.
-\end{alertblock}
+\frametitle{Questions?}
 \end{frame}
 
 \end{document}
