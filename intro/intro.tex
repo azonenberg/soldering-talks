@@ -1,6 +1,7 @@
 \documentclass{beamer}
 \mode<presentation>
 \usetheme{Berlin}
+\usepackage{tabularx}
 
 \title{Introduction to Soldering}
 \author{Andrew D. Zonenberg}
@@ -36,7 +37,7 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Safety concerns}
+\frametitle{Safety Concerns}
 \begin{itemize}
 \item Toxic heavy metals (Pb, Cd, Sb)
 \item High temperatures
@@ -66,7 +67,7 @@
 \item Largely immune to tin whiskers
 \item Midrange melting point (183C for 63/37 eutectic)
 \item Industry standard until early 2000s
-\item Banned in Europe since 2003 due to toxicity concerns
+\item Banned in Europe since 2003 due to toxicity
 \item Still used in some medical/aerospace applications
 \end{itemize}
 \begin{alertblock}{Safety note}
@@ -81,19 +82,24 @@ Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
 \item Not eutectic, but close
 \item Higher melting point (SAC305 is 217-220C)
 \item Nontoxic
-\item Tin whisker concerns
+\item Susceptible to tin whiskers
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Low melting point alloys}
+\frametitle{Low Melting Point Alloys}
 \begin{itemize}
 \item Used on heat-sensitive components (LED lighting etc)
-\item 52\% In / 48\% Sn melts at 118C
-\item 57\% Bi / 42\% Sn / 1\% Ag melts at 138C
-\item 100\% In melts at 157C
 \item Brittle, lose strength when heated
 \end{itemize}
+
+\begin{tabularx}{\textwidth}{| X | X |}
+\hline
+\textbf{Alloy} & \textbf{Melting point}	\\ \hline
+52\% In / 48\% Sn & 118C				\\ \hline
+57\% Bi / 42\% Sn / 1\% Ag & 138C		\\ \hline
+100\% In & 157C							\\ \hline
+\end{tabularx}
 \end{frame}
 
 \begin{frame}
@@ -206,13 +212,39 @@ Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
 \begin{frame}
 \frametitle{Soldering Fluxes - Types}
 \begin{itemize}
-\item Natural rosin vs synthetic compounds
-\item Cleaning required? Hot water, alcohol, other solvent?
-\item Form - Gel, liquid, foam
+\item Natural rosin or synthetic compounds
+\item Paste, gel, foam, and liquid forms available
+\item More active fluxes tend to leave more corrosive residue
+\item Less active fluxes may not need cleaning at all
 \end{itemize}
 \begin{alertblock}{Safety note}
 Long-term exposure to flux vapors can trigger allergic reactions or cause asthma. Avoid inhaling flux smoke.
 \end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Flux Core Solder Wire}
+\begin{itemize}
+\item Most solder has 0.5-3\% flux (by weight) in the core
+\item Eliminates need to manually add flux to every joint
+\item Additional flux may still be needed in some cases
+\end{itemize}
+\begin{center}
+\includegraphics[width=6cm,keepaspectratio]{flux-core.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solder Paste}
+\begin{itemize}
+\item Tiny spheres of solder suspended in sticky flux
+\item IPC J-STD-005 type specifies sphere diameter
+\item Type 3 (25-45 $\mu m$) and 4 (20-38 $\mu m$) most common
+\item Usually stenciled, can also apply with syringe
+\end{itemize}
+\begin{center}
+\includegraphics[height=3cm,keepaspectratio]{solder-paste.jpg}
+\end{center}
 \end{frame}
 
 \begin{frame}
