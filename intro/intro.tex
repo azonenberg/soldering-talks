@@ -49,16 +49,12 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Tin Whiskers}
+\frametitle{Solder Alloys}
 \begin{itemize}
-\item Metals can form ``whiskers" over time, causing shorts
-\item Exact mechanism of formation not well understood
-\item Addition of lead to tin reduces whisker formation
-\item Mostly a concern in aerospace / life safety systems
+\item Sn-Pb
+\item Sn-Ag-Cu (SAC)
+\item Low melting point
 \end{itemize}
-\begin{center}
-\includegraphics[width=4cm,keepaspectratio]{whiskers.jpg}
-\end{center}
 \end{frame}
 
 \begin{frame}
@@ -73,6 +69,19 @@
 \begin{alertblock}{Safety note}
 Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
 \end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tin Whiskers}
+\begin{itemize}
+\item Metals can form ``whiskers" over time, causing shorts
+\item Exact mechanism of formation not well understood
+\item Addition of lead to tin reduces whisker formation
+\item Mostly a concern in aerospace / life safety systems
+\end{itemize}
+\begin{center}
+\includegraphics[width=4cm,keepaspectratio]{whiskers.jpg}
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -114,6 +123,18 @@ Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
 \end{frame}
 
 \begin{frame}
+\frametitle{PCB Surface Finishes}
+\begin{itemize}
+\item Unplated copper
+\item HASL
+\item OSP
+\item Immersion Sn/Ag
+\item ENIG
+\item Others
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Unplated Copper}
 \begin{itemize}
 \item Extremely short shelf life
@@ -131,7 +152,8 @@ Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
 \begin{itemize}
 \item Thick (1800 - 5100 nm) layer of solder
 \item Board finish \emph{is} solder - excellent solderability
-\item Cheap, but poor surface flatness
+\item Cheap, but poor surface flatness (humps on small pads)
+\item May use Sn-Pb or lead-free solder
 \end{itemize}
 \begin{center}
 \includegraphics[height=4cm,keepaspectratio]{hasl.jpg}
@@ -142,7 +164,7 @@ Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
 \frametitle{OSP - Organic Solderability Preservative}
 \begin{itemize}
 \item Very thin (200 - 500 nm) organic oxidation barrier
-\item Degrades rapidly if not soldered
+\item Degrades rapidly - short shelf life
 \item Inexpensive and extremely flat
 \end{itemize}
 \begin{center}
@@ -166,13 +188,22 @@ Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
 \frametitle{ENIG}
 \begin{itemize}
 \item 2-layer system: 75-125 nm Au over 3000 - 6000 nm Ni
-\item Ni acts as diffusion barrier
-\item More expensive
-\item Long shelf life
+\item Ni diffusion barrier, Au prevents oxidation
+\item More expensive, but long shelf life
+\item Brittle joints if Au layer is too thick - need good control
 \end{itemize}
 \begin{center}
 \includegraphics[height=4cm,keepaspectratio]{enig.jpg}
 \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Other Finishes}
+\begin{itemize}
+\item ENEPIG (Ni-Pd-Au)
+\item Hard gold (for card edges)
+\item Soft wirebondable gold
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -181,9 +212,29 @@ Lead is a cumulative neurotoxin! Wash hands after handling lead-based solder.
 \item Cu, Sn, etc are \emph{soluble} in molten solder!
 \item When molten solder is applied to a surface, \emph{diffusion} takes place between the surface and solder
 \item The resulting \emph{intermetallic compound} (IMC) bonds strongly to both the solder and component.
-\item No IMC = no solder joint (e.g. Sn based solder on Al surface)
-\item IMC is, unfortunately, more brittle than bulk solder
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Intermetallic Compounds}
+\begin{itemize}
+\item No IMC = no solder joint (e.g. Sn based solder on Al surface)
+\item IMC is brittle - too much is bad!
+\end{itemize}
+\begin{center}
+\includegraphics[height=5cm,keepaspectratio]{imc.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Diffusion and IMC in soldered ENIG}
+\begin{itemize}
+\item Left: bronze SMT header w/ Ni + Sn plating
+\item Right: ENIG plated PCB pad
+\end{itemize}
+\begin{center}
+\includegraphics[width=10cm,keepaspectratio]{element-profile.png}
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -225,6 +276,7 @@ Long-term exposure to flux vapors can trigger allergic reactions or cause asthma
 \frametitle{Flux Core Solder Wire}
 \begin{itemize}
 \item Most solder has 0.5-3\% flux (by weight) in the core
+\item Flux density $\ll$ solder so large volume fraction
 \item Eliminates need to manually add flux to every joint
 \item Additional flux may still be needed in some cases
 \end{itemize}
@@ -330,6 +382,48 @@ Non-contact heating using \emph{convection} or \emph{radiation} in an oven or wi
 \begin{center}
 \includegraphics[width=8cm,keepaspectratio]{curie-iron.jpg}
 \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reflow Soldering}
+\begin{itemize}
+\item x
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{IR Reflow Oven}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Convection Reflow Oven}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Hot Air Rework Tool}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Reflow Profiling}
+\begin{itemize}
+\item Ramp up/down rates
+\item Peak temp
+\item Time above liquidus (TAL)
+\item Ramp-to-soak or ramp-soak-spike
+\end{itemize}
+\begin{center}
+\includegraphics[width=10cm,keepaspectratio]{reflow-profile.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ramp-Up Rate}
+\begin{itemize}
+\item
+\end{itemize}
 \end{frame}
 
 \begin{frame}
