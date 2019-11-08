@@ -387,23 +387,62 @@ Non-contact heating using \emph{convection} or \emph{radiation} in an oven or wi
 \begin{frame}
 \frametitle{Reflow Soldering}
 \begin{itemize}
-\item x
+\item Entire board and all components are heated at once
+\item Less thermal gradient stress on components/PCB
+\item Parallel processing - much faster for large boards
+\item Batch vs in-line design
+\item Can do inert gas purging
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hot Plate}
+\begin{itemize}
+\item Direct contact heating from underside of board
+\item Easy to overheat bottom side of board
+\item No way to do parts on both sides of board
+\item Batch processing only
+\item Toaster ovens are cheap! No excuse for using a hot plate
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{IR Reflow Oven}
+\begin{itemize}
+\item Infrared heat lamps shine on board to heat it
+\item Beware of shadowing effects with tall components
+\item Emissivity concerns w/ dark or reflective areas
+\item Falling out of favor for the above reasons
+\end{itemize}
+\end{frame}
 
+\begin{frame}
+\frametitle{Vapor Phase Reflow Oven}
+\begin{itemize}
+\item Heated liquid evaporates, vapor transfers heat to board
+\item Super stable temperature set by physics (like Curie iron)
+\item Very expensive, batch processing only
+\item Inherently oxygen-free process
+\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Convection Reflow Oven}
-
+\begin{itemize}
+\item Air (or N2) inside oven is heated, then transfers to board
+\item More uniform heating than IR
+\item Most common reflow process in industry
+\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Hot Air Rework Tool}
-
+\begin{itemize}
+\item Similar construction to a heat gun or hair dryer
+\item Separate controls for air volume and temperature
+\item Allows removal or replacement of single components
+\item Generally not used for an entire board
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -422,7 +461,54 @@ Non-contact heating using \emph{convection} or \emph{radiation} in an oven or wi
 \begin{frame}
 \frametitle{Ramp-Up Rate}
 \begin{itemize}
-\item
+\item Too slow: flux burns off prematurely, stress on parts
+\item Too fast: high thermal mass parts may not reflow fully
+\item Goal is uniform temp across entire board
+\item Typically 0.6 - 1.8 C/s
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Peak Temp}
+\begin{itemize}
+\item Too low: poor IMC formation, incomplete reflow
+\item Too high: thermal damage to parts or PCB
+\item Typically 235 - 255C for SAC305
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Time Above Liquidus}
+\begin{itemize}
+\item Too short: poor IMC formation, incomplete reflow
+\item Too long: excessive IMC, thermal damage
+\item Typically 30-60 sec
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ramp-Down Rate}
+\begin{itemize}
+\item Too fast: thermal stress fractures
+\item Too slow: excessive IMC
+\item Typically -4C/s
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Two-Sided Reflow}
+\begin{itemize}
+\item Assemble and reflow bottom side first (upside down)
+\item Glue heavy components
+\item Assemble top side as normal
+\item Surface tension of molten solder will hold smaller parts
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reflow Defects}
+\begin{itemize}
+\item x
 \end{itemize}
 \end{frame}
 
